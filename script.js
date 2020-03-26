@@ -25,5 +25,10 @@ for (var i = 0; i < times.length; i++){
     else {
         $(currentId).addClass("past");
     }
-    
 }
+
+// look for save clicks
+var saveBtns = $(".saveBtn");
+saveBtns.on("click", function(){
+    console.log($(this).attr("data-save-time"));
+});
