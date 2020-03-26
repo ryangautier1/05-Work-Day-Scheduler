@@ -3,7 +3,7 @@ $("#currentDay").text(moment().format('dddd, MMMM Do'));
 
 // get current time
 var currentTime = moment().format('ha');;
-var times = ["8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm"];
+var times = ["8", "9", "10", "11", "12", "1", "2", "3", "4", "5", "6"];
 var future = false;
 
 // set class of time blocks based on  current time
@@ -14,7 +14,7 @@ for (var i = 0; i < times.length; i++){
             $(currentId).addClass("future");
     }
     // check if times[i] is right now
-    else if (times[i] == currentTime){
+    else if (times[i] == currentTime[0]){
         $(currentId).addClass("present");
         // further iterations should set future class
         future = true;
@@ -30,5 +30,5 @@ for (var i = 0; i < times.length; i++){
 // look for save clicks
 var saveBtns = $(".saveBtn");
 saveBtns.on("click", function(){
-    console.log($(this).attr("data-save-time"));
+    $(this).attr("data-save-time");
 });
