@@ -5,6 +5,7 @@ $("#currentDay").text(moment().format('dddd, MMMM Do'));
 var currentTime = moment().format('ha');;
 var times = ["8", "9", "10", "11", "12", "1", "2", "3", "4", "5", "6"];
 var future = false;
+// setStoredInputs();
 
 // set class of time blocks based on  current time
 for (var i = 0; i < times.length; i++){
@@ -30,5 +31,10 @@ for (var i = 0; i < times.length; i++){
 // look for save clicks
 var saveBtns = $(".saveBtn");
 saveBtns.on("click", function(){
-    $(this).attr("data-save-time");
+    // store the corresponding time for the save button clicked
+    var btnClicked = $(this).attr("data-save-time");
+
+    // store the input of the corresponding time block
+    var input = $("#" + btnClicked).val();
+    localStorage.setItem(btnClicked, input);
 });
