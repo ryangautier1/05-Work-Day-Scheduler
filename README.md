@@ -29,4 +29,4 @@ THEN the saved events persist
 ```
 
 ## Screenshot
-![Screenshot of website]()
+![Screenshot of website](https://github.com/ryangautier1/05-Work-Day-Scheduler/blob/master/screenshot.PNG?raw=true)
