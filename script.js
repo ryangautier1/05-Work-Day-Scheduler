@@ -18,7 +18,7 @@ for (var i = 0; i < times.length; i++) {
         $(currentId).addClass("future");
     }
     // check if times[i] is right now
-    else if (times[i] == currentTime[0]) {
+    else if (times[i] == moment().format('h')) {
         $(currentId).addClass("present");
         // further iterations should set future class
         future = true;
